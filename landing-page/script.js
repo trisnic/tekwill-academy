@@ -5,28 +5,6 @@ const toggleMenu = () => {
     navigation.classList.toggle('active');
 }
 
-// form.addEventListener('submit', (event) => {
-//   // To prevent form submission
-//   event.preventDefault();
-//   const fullNameInput = document.querySelector('.fullName');
-//   const emailInput = document.querySelector('input[type="email"]');
-//   const select1 = document.querySelector('select:nth-of-type(1)');
-//   const select2 = document.querySelector('select:nth-of-type(2)');
-//   const messageInput = document.querySelector('.message-input');
-
-//   if (fullNameInput.value.trim() === '') {
-//     alert('Please enter your name');
-//     emailInput.focus();
-//   }
-
-//   console.log(fullNameInput.value.trim());
-//   console.log(emailInput.value);
-//   console.log(select1.value);
-//   console.log(select2.value);
-//   console.log(messageInput.value);
-  
-//   form.reset();
-// });
 
 const openModalButton = document.getElementById('open-modal');
 const modal = document.getElementById('modal');
@@ -131,6 +109,58 @@ window.addEventListener('scroll', function() {
     }
   });
 //end subscribe in the footer
+
+//Thank you for booking an appointment message when form is successfully submitted
+
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  // Validate form inputs
+  let fullNameInput = document.querySelector(".fullName");
+  let emailInput = document.querySelector(".email");
+  let selectInputs = document.querySelectorAll("select");
+  let messageInput = document.getElementById("message");
+
+  let isValid = true;
+  if (!fullNameInput.value.trim()) {
+    isValid = false;
+    fullNameInput.classList.add("error");
+  } else {
+    fullNameInput.classList.remove("error");
+  }
+
+  if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+    isValid = false;
+    emailInput.classList.add("error");
+  } else {
+    emailInput.classList.remove("error");
+  }
+
+  for (let selectInput of selectInputs) {
+    if (!selectInput.value) {
+      isValid = false;
+      selectInput.classList.add("error");
+    } else {
+      selectInput.classList.remove("error");
+    }
+  }
+
+  if (!messageInput.value.trim()) {
+    isValid = false;
+    messageInput.classList.add("error");
+  } else {
+    messageInput.classList.remove("error");
+  }
+
+  if (isValid) {
+    document.getElementById("thankYouMessage").style.display = "block";
+    document.getElementById("appointmentForm").reset();
+  }
+});
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
 //using DOM to hide an element on mobile
 const element = document.getElementById('separator');
