@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" />
+    <title>Realtor api</title>
+</head>
+
+<body>
+    <div id="loading-spinner"></div>
+
+    <div id="search-container">
+        <input type="text" id="postal-code-input" placeholder="Enter Postal Code">
+        <button onclick="searchProperties()">Search</button>
+    </div>
+
+    <button id="favorite-tab" onclick="displayFavoriteProperties()">Favorite</button>
+    <div id="favorite-container"></div>
+
+    <div id="property-list"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div>
+                <span class="close-modal" onclick="closeModal()">&#10005;</span>
+            </div>
+            <div id="modal-property"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./script.js">
+    </script>
+</body>
+
+</html>

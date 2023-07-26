@@ -1,0 +1,278 @@
+
+@media (min-width: 1900) {
+    .form-container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1280px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 790px) {
+  .main-content {
+    padding: 40px 0;
+  }  
+
+  .values-section {
+    padding: 0 80px;
+  }
+
+  .containers {
+    grid-template-columns: 1fr 1fr;
+   }
+
+   .box-container {
+    max-width: 600px;
+   }
+
+   .card-item h5 {
+    font-size: 20px;
+   }
+
+   .card-item p {
+    font-size: 16px;
+   }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+        background: url(img/mob-menu-icn.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active {
+        width: 40px;
+        height: 40px;
+        background: url(img/mob-menu-icn.png);
+        background-size: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        margin-top: 0px;
+        z-index: 20000;
+        position: fixed left;
+        display: flex;
+    }
+
+    .main-nav .center {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+    }
+
+    .main-nav .nav-links.active {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        left: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        top: -15px;
+        position: fixed;
+        background: #252B42;
+        color: white;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-nav .nav-links.active .main-nav-link {
+        color: white;
+    }
+
+    .team-member-img {
+        width: auto;
+      }
+
+      .video-content {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        right: 10px;
+        transform: translate(0, -50%);
+        text-align: center;
+      }
+
+      section.hsection {
+        width: auto;
+        padding: 0px 20px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .containers4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      padding: 0px 20px;
+      margin-bottom: 40px;
+  }
+
+  .footer-firstline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.containers {
+  grid-template-columns: auto;
+  width: 330px;
+}
+
+.containers2 {
+display: grid;
+grid-template-columns: auto;
+gap: 32px;
+width: 330px;
+justify-content: center;
+}
+
+.containers3 {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 32px;
+  width: 330px;
+}
+
+.box-container {
+        padding: 12px;
+    }
+
+    input {
+      grid-column: 1 / span 2;
+    }
+
+    select {
+      grid-column: 1 / span 2;
+    }
+
+    .form-container .submit-button {
+      grid-column: 1 / span 2;
+      grid-row: auto;
+      width: 330px;
+  }
+
+  .appointment-section {
+    width: 330px;
+    margin: auto;
+  }
+  .contactus-box-container {
+    margin: 0 auto;
+    max-width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactus-section {
+  height: auto;
+  padding: 40px;
+}
+
+h3.contact {
+  text-align: center;
+}
+
+.footer-item {
+  padding: 0px 0px 0px 0px;
+}
+
+.subscribe-form {
+  padding: 0px;
+}
+
+.team-section p {
+  width: 330px;
+}
+
+.testimonials-section p {
+  max-width: 330px;
+}
+
+.footer-firstline {
+  padding: 20px;
+}
+
+.top-logo {
+  z-index: 7777777;
+}
+
+.values-section p {
+  max-width: 330px;
+}
+
+.mob-hidden {
+  display: none;
+}
+
+}
+
+@media (max-width: 480px) {
+    .box-container {
+        padding: 12px;
+    }
+
+    .containers {
+    grid-template-columns: 1fr;
+   }
+
+    .main-nav {
+        padding: 0;
+        margin: 0;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .values-text {
+        margin: 20px auto;
+    }
+
+    .team-member-img {
+        width: auto;
+      }
+
+      .video-content {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        right: 10px;
+        transform: translate(0, -50%);
+        text-align: center;
+      }
+
+      section.hsection {
+        width: auto;
+        padding: 0px 20px;
+      }
+
+      .containers4 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+        padding: 0px 20px;
+    }
+
+    .containers {
+      grid-template-columns: auto;
+  }
+}
